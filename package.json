@@ -1,0 +1,42 @@
+{
+  "name": "datalens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "icons": "node scripts/generate-icons.js",
+    "test": "npx tsx scripts/test-extractor.ts && npx tsx scripts/test-statistics.ts && npx tsx scripts/test-csv-json-extractor.ts && npx tsx scripts/test-phase2-cleaning-recommendations.ts && npx tsx scripts/test-phase3-ai-insights-chat.ts && npx tsx scripts/test-phase4-performance.ts",
+    "typecheck": "tsc --noEmit",
+    "build:sidepanel": "vite build",
+    "build:content": "vite build --config vite.content.config.ts",
+    "build": "npm run build:sidepanel && npm run build:content"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.9",
+    "lucide-react": "^1.66.0",
+    "plotly.js-dist-min": "^4.2.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/chrome": "^0.3.7",
+    "@types/node": "^26.6.6",
+    "@types/plotly.js-dist-min": "^2.3.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "puppeteer-core": "^25.16.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}
